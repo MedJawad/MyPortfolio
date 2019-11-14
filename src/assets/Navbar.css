@@ -1,0 +1,12 @@
+
+.item:hover .navLink{
+    color: forestgreen;
+    transition: 0.7s ease;
+}
+
+.navLink{
+    font-family: "Times New Roman", Times, serif;
+    font-size: large;
+    font-weight: 600;
+    color:whitesmoke;
+}
