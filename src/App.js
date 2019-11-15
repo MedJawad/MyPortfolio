@@ -7,14 +7,18 @@ import MainBody from "./components/Body";
 import MainFooter from "./components/Footer";
 
 
-function App() {
-  return (
-    <div className="App">
-      <MainNavbar />
-      <MainBody />
-      <MainFooter />
-    </div>
-  );
+class App extends React.Component {
+
+    render(){
+  
+      return (
+        <div className="App">
+          <MainNavbar />
+          <MainBody />
+          <MainFooter />
+        </div>
+      );
+    }
 }
 
 export default App;

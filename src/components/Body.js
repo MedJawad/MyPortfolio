@@ -4,7 +4,6 @@ import { Button ,
         Col,
         Card,
         CardText,
-        CardImg,
     } from 'reactstrap';
 import '../assets/Body.css';
 
@@ -58,7 +57,7 @@ const TopPicture = (props) => {
     }
 
     return (
-        <div className="imgStyle">
+        <div className="imgStyle" name="Home">
            {/* <img src="images/top.jpg" alt="Top of Page Pic" width="100%" /> */}
            <div className="TopDescription bg-light text-dark" style={descrStyle} onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)} >
                <h1>I'm Mohamed Jawad</h1>
@@ -72,7 +71,7 @@ const TopPicture = (props) => {
 const AboutMe = (props) => {
 
     return (
-            <div className="bodySection">
+            <div className="bodySection" name="About" >
                 <h1 className="SectionTitle">About Me</h1>
                 <Row className="AboutmeRow">
                     <Col>
@@ -98,7 +97,7 @@ const AboutMe = (props) => {
 
 const Portfolio = (props) => {
     return (
-            <div className="bodySection">
+            <div className="bodySection" name="Portfolio" >
                  <h1 className="SectionTitle">My Portfolio</h1>
                  <Row className="PortfolioRow">
                     <Col>
@@ -274,5 +273,5 @@ const Github = (props) => {
 
 const Contact = (props) => {
     
-    return <div />;
+    return <div name="Contact" />;
 } 

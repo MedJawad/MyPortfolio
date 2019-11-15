@@ -10,3 +10,7 @@
     font-weight: 600;
     color:whitesmoke;
 }
+
+.nav-link{
+    cursor: pointer;
+}

@@ -1,16 +1,19 @@
 import React from 'react';
 //import  from '';
+import '../assets/Navbar.css';
 
 import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    Nav,
-    NavItem,
-    NavLink
-  } from 'reactstrap';
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  Nav,
+  NavItem,
+  NavLink
+} from 'reactstrap';
 
-  import '../assets/Navbar.css';
+import Scroll from 'react-scroll';
+const Link = Scroll.Link;
+
 
   const debounce = (func, wait) => {
     let timeout
@@ -67,6 +70,10 @@ export default class MainNavbar extends React.Component {
           this.setNavbarInvisible();
         }
     }
+
+    handleSetActive(to){
+      console.log(to);
+    }
     
     navStyle={
         position : 'fixed',
@@ -85,25 +92,33 @@ export default class MainNavbar extends React.Component {
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="col-sm-12 col-md-6 offset-md-3" navbar>
                   <NavItem className="col-sm-2 item">
-                    <NavLink href="#"><span className="navLink">Portfolio</span></NavLink>
+                      <Link className="nav-link" activeClass="active" to="Portfolio" spy={true} smooth={true} offset={-50} duration={500} onSetActive={this.handleSetActive}>
+                         <span className="navLink">Portfolio</span>        
+                    </Link>
                   </NavItem>
                   <NavItem className="col-sm-2 item">
-                    <NavLink href="#"><span className="navLink">About</span></NavLink>
-                  </NavItem>
+                      <Link className="nav-link" activeClass="active" to="About" spy={true} smooth={true} offset={-50} duration={500} onSetActive={this.handleSetActive}>
+                         <span className="navLink">Me</span>        
+                    </Link>
+                    </NavItem>
                   <NavItem className="col-sm-4 item">
-                    <NavLink href="/Home/"><span className="navLink">Home</span></NavLink>
+                      <Link className="nav-link" activeClass="active" to="Home" spy={true} smooth={true} offset={0} duration={500} onSetActive={this.handleSetActive}>
+                         <span className="navLink">Home</span>        
+                    </Link>
+                   </NavItem>
+                  <NavItem className="col-sm-2 item">
+                      <Link className="nav-link" activeClass="active" to="Contact" spy={true} smooth={true} offset={-50} duration={500} onSetActive={this.handleSetActive}>
+                         <span className="navLink">Contact</span>        
+                    </Link>              
                   </NavItem>
                   <NavItem className="col-sm-2 item">
-                    <NavLink href="https://github.com/MedJawad"><span className="navLink">Github</span></NavLink>
-                  </NavItem>
-                  <NavItem className="col-sm-2 item">
-                    <NavLink href="#"><span className="navLink">Contact</span></NavLink>
+                    <NavLink href="https://github.com/MedJawad" target="_blank"><span className="navLink">Github</span></NavLink>
                   </NavItem>
                 </Nav>
               </Collapse>
             </Navbar>
           </div>
 
-        )
+        );
     }
 }
