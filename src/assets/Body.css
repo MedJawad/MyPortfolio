@@ -1,9 +1,12 @@
-
-.imgStyle{
-    background-image : url('images/top.jpg');
-    background-size : cover;
+.imgStyle, .PictureCol, .WebDevImg {
     background-repeat : no-repeat;
     background-position: center;
+}
+.imgStyle , .PictureCol{
+    background-size : cover;
+}
+.imgStyle{
+    background-image : url('images/top.jpg');
     height: 100vh;
 }
 
@@ -17,8 +20,46 @@
 }
 .PictureCol{
     background-image : url('images/top.jpg');
-    background-size : cover;
-    background-repeat : no-repeat;
-    background-position: center;
-    /* height: 100vh; */
+}
+
+.PortfolioRow{
+    width: 95%;
+    margin: auto!important;
+    padding: 2vh;
+}
+
+.WebDevImg{
+    background-size: contain;
+}
+
+.Img1{
+    background-image : url('images/HTML5.png');
+}
+.Img2{
+    background-image : url('images/PHP.png');
+}
+.Img3{
+    background-image : url('images/CSS3.png');
+}
+.Img4{
+    background-image : url('images/SYMFONY.png');
+}
+.Img5{
+    
+    background-image : url('images/BOOTSTRAP.png');
+}
+.Img6{
+    background-image : url('images/Mysql.png');
+}
+.Img7{
+    background-image : url('images/JS.png');
+}
+.Img8{
+    background-image : url('images/JAVA.png');
+}
+.Img9{
+    background-image : url('images/REACT.png');
+}
+.Img10{
+    background-image : url('images/Hibernate.png');
 }

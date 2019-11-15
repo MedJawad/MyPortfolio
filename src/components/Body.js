@@ -1,5 +1,11 @@
 import React,{useState} from 'react';
-import { Button ,Row, Col} from 'reactstrap';
+import { Button ,
+        Row,
+        Col,
+        Card,
+        CardText,
+        CardImg,
+    } from 'reactstrap';
 import '../assets/Body.css';
 
 
@@ -94,34 +100,167 @@ const Portfolio = (props) => {
     return (
             <div className="bodySection">
                  <h1 className="SectionTitle">My Portfolio</h1>
-                <Row className="PortfolioRow">
+                 <Row className="PortfolioRow">
                     <Col>
-                            <p>
+                    <Card>
+                        <Row>
+                            <Col className="WebDevImg Img1">
+                            </Col>
+                            <Col>
+                        <CardText >
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
+
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-                                </p>
+                        </CardText>
+                            </Col>
+                        </Row>
+                    </Card>
                     </Col>
                     <Col>
-                    <p>
+                    <Card>
+                        <Row>
+                            <Col className="WebDevImg Img2">
+                            </Col>
+                            <Col>
+                        <CardText >
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
+
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-                                </p>
+                        </CardText>
+                            </Col>
+                        </Row>
+                    </Card>
                     </Col>
                 </Row>
                 <Row className="PortfolioRow">
                     <Col>
-                            <p>
+                    <Card>
+                        <Row>
+                            <Col className="WebDevImg Img3">
+                            </Col>
+                            <Col>
+                        <CardText >
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
+
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-                                </p>
+                        </CardText>
+                            </Col>
+                        </Row>
+                    </Card>
                     </Col>
                     <Col>
-                    <p>
+                    <Card>
+                        <Row>
+                            <Col className="WebDevImg Img4">
+                            </Col>
+                            <Col>
+                        <CardText >
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
+
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-                                </p>
+                        </CardText>
+                            </Col>
+                        </Row>
+                    </Card>
                     </Col>
                 </Row>
+                <Row className="PortfolioRow">
+                    <Col>
+                    <Card>
+                        <Row>
+                            <Col className="WebDevImg Img5">
+                            </Col>
+                            <Col>
+                        <CardText >
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
+
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
+                        </CardText>
+                            </Col>
+                        </Row>
+                    </Card>
+                    </Col>
+                    <Col>
+                    <Card>
+                        <Row>
+                            <Col className="WebDevImg Img6">
+                            </Col>
+                            <Col>
+                        <CardText >
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
+
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
+                        </CardText>
+                            </Col>
+                        </Row>
+                    </Card>
+                    </Col>
+                </Row>
+                <Row className="PortfolioRow">
+                    <Col>
+                    <Card>
+                        <Row>
+                            <Col className="WebDevImg Img7">
+                            </Col>
+                            <Col>
+                        <CardText >
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
+
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
+                        </CardText>
+                            </Col>
+                        </Row>
+                    </Card>
+                    </Col>
+                    <Col>
+                    <Card>
+                        <Row>
+                            <Col className="WebDevImg Img8">
+                            </Col>
+                            <Col>
+                        <CardText >
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
+
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
+                        </CardText>
+                            </Col>
+                        </Row>
+                    </Card>
+                    </Col>
+                </Row>
+                <Row className="PortfolioRow">
+                    <Col>
+                    <Card>
+                        <Row>
+                            <Col className="WebDevImg Img9">
+                            </Col>
+                            <Col>
+                        <CardText >
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
+
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
+                        </CardText>
+                            </Col>
+                        </Row>
+                    </Card>
+                    </Col>
+                    <Col>
+                    <Card>
+                        <Row>
+                            <Col className="WebDevImg Img10">
+                            </Col>
+                            <Col>
+                        <CardText >
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
+
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
+                        </CardText>
+                            </Col>
+                        </Row>
+                    </Card>
+                    </Col>
+                </Row>
+               
             </div>
         )
     
