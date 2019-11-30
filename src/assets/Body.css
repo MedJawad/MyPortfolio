@@ -27,39 +27,43 @@
     margin: auto!important;
     padding: 2vh;
 }
-
+.cardCol{
+}
+.internal-card, .internal-card-row{
+    height : 100%;
+}
 .WebDevImg{
     background-size: contain;
 }
 
-.Img1{
+.HTML{
     background-image : url('images/HTML5.png');
 }
-.Img2{
+.PHP{
     background-image : url('images/PHP.png');
 }
-.Img3{
+.CSS{
     background-image : url('images/CSS3.png');
 }
-.Img4{
+.SYMFONY{
     background-image : url('images/SYMFONY.png');
 }
-.Img5{
+.BS{
     
     background-image : url('images/BOOTSTRAP.png');
 }
-.Img6{
+.MYSQL{
     background-image : url('images/Mysql.png');
 }
-.Img7{
+.JS{
     background-image : url('images/JS.png');
 }
-.Img8{
+.JAVA{
     background-image : url('images/JAVA.png');
 }
-.Img9{
+.REACT{
     background-image : url('images/REACT.png');
 }
-.Img10{
+.HIBERNATE{
     background-image : url('images/Hibernate.png');
 }

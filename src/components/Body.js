@@ -5,6 +5,7 @@ import { Button ,
         Card,
         CardText,
     } from 'reactstrap';
+
 import '../assets/Body.css';
 
 
@@ -108,34 +109,35 @@ const Portfolio = (props) => {
     const hiberDesc = "Hibernate is an open source object relational mapping (ORM) tool that provides a framework to map object-oriented domain models to relational databases for web applications. Object relational mapping is based on the containerization of objects and the abstraction that provides that capacity.";
 
     const rowsElements = [
-    {name: "HTML",desc: htmlDesc,image: "images/HTML5.png"},
-    {name: "JS",desc: jsDesc,image: "images/JS.png"},
-    {name: "CSS",desc: cssDesc,image: "images/CSS.png"},
-    {name: "BS",desc: bsDesc,image: "images/BOOTSTRAP.png"},
-    {name: "PHP",desc: phpDesc,image: "images/PHP.png"},
-    {name: "SYMFONY",desc: symfDesc,image: "images/SYMFONY.png"},
-    {name: "REACT",desc: reactDesc,image: "images/REACT.png"},
-    {name: "MYSQL",desc: mysqlDesc,image: "images/Mysql.png"},
-    {name: "JAVA",desc: javaDesc,image: "images/JAVA.png"},
-    {name: "HIBERNATE",desc: hiberDesc,image: "images/Hibernate.png"}
-                    
+    {name: "HTML",desc: htmlDesc,image: "HTML5.png"},
+    {name: "JS",desc: jsDesc,image: "JS.png"},
+    {name: "CSS",desc: cssDesc,image: "CSS.png"},
+    {name: "BS",desc: bsDesc,image: "BOOTSTRAP.png"},
+    {name: "PHP",desc: phpDesc,image: "PHP.png"},
+    {name: "SYMFONY",desc: symfDesc,image: "SYMFONY.png"},
+    {name: "REACT",desc: reactDesc,image: "REACT.png"},
+    {name: "MYSQL",desc: mysqlDesc,image: "Mysql.png"},
+    {name: "JAVA",desc: javaDesc,image: "JAVA.png"},
+    {name: "HIBERNATE",desc: hiberDesc,image: "Hibernate.png"}
+
     ];
 
     const rows = [];
-    for (let index = 0; index < rowsElements.length; index+=2) {
+    for (let index = 0; index < rowsElements.length-1; index+=2) {
         rows.push([rowsElements[index],rowsElements[index+1]]);
-        if(index===rowsElements.length-2 && rowsElements.length%2===1){   rows.push(  [   rowsElements[rowsElements.length-1] ]   )   }
-     }
+    }
+    if(rowsElements.length%2===1){   rows.push(  [   rowsElements[rowsElements.length-1] ]   )   }
+
     return (
             <div className="bodySection" name="Portfolio" >
                  <h1 className="SectionTitle">My Portfolio</h1>
 
                  {
 
-                     rows.map( function(currentRowElements) {
-                       return ( <Row className="PortfolioRow">
+                     rows.map( function(currentRowElements,index) {
+                       return ( <Row  key={index} className="PortfolioRow">
                             {
-                                currentRowElements.map(currentRowElement => <Col><PortfolioCard name={currentRowElement.name} desc={currentRowElement.desc} image={currentRowElement.image} /></Col>)
+                                currentRowElements.map((currentRowElement,index) => <Col key={index} className="cardCol"><PortfolioCard name={currentRowElement.name} desc={currentRowElement.desc} image={currentRowElement.image} /></Col>)
                             }
                         </Row>);
                         }
@@ -150,11 +152,28 @@ const Portfolio = (props) => {
 
 const PortfolioCard = (props) => {
 
-    // props.image
+    // const imgStyle = {
+    //     backgroundImage : "url('images/"+props.image+"')",
+    // }
+    // let bg;
+    // switch (props.name) {
+    //     case 'HTML':
+    //         bg=HTML;
+    //         break;
+    
+    //     default:
+    //         break;
+    // }
+    // const imgStyle = {
+    //     backgroundImage : `url('${bg}')`,
+    // }
+    // const imgStyle = {
+    //     backgroundImage : `url(require("../assets/images/${props.image}"))`
+    // }
     return (
-        <Card>
-            <Row>
-                <Col className={`WebDevImg`}>
+        <Card className="internal-card">
+            <Row className="internal-card-row">
+                <Col className={`WebDevImg ${props.name}`}>  {/*style={imgStyle}*/}
                 </Col>
                 <Col>
                     <CardText >
