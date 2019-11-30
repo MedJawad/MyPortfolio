@@ -8,7 +8,6 @@ import { Button ,
 import '../assets/Body.css';
 
 
-
 export default class MainBody extends React.Component {
 
 
@@ -96,175 +95,77 @@ const AboutMe = (props) => {
 } 
 
 const Portfolio = (props) => {
+
+    const htmlDesc = "Stands for Hypertext Markup Language. HTML is the language used to create webpages. Hypertext refers to the hyperlinks that an HTML page may contain. Markup language refers to the way tags are used to define the page layout and elements within the page.";
+    const jsDesc = "Javascript (JS) is a scripting languages, primarily used on the Web. It is used to enhance HTML pages and is commonly found embedded in HTML code. JavaScript is an interpreted language. ... JavaScript renders web pages in an interactive and dynamic fashion.";
+    const bsDesc = "Bootstrap is a free and open source front end development framework for the creation of websites and web apps. The Bootstrap framework is built on HTML, CSS, and JavaScript (JS) to facilitate the development of responsive, mobile-first sites and apps. ... The software is available precompiled or as source code.";
+    const cssDesc = "CSS. Stands for Cascading Style Sheet. Cascading style sheets are used to format the layout of Web pages. They can be used to define text styles, table sizes, and other aspects of Web pages that previously could only be defined in a page's HTML.";
+    const phpDesc = "PHP is a server side scripting language. that is used to develop Static websites or Dynamic websites or Web applications. PHP stands for Hypertext Pre-processor, that earlier stood for Personal Home Pages. PHP scripts can only be interpreted on a server that has PHP installed.";
+    const symfDesc = "Symfony is a PHP framework, which aims at accelerating the creation and maintenance of web applications and to replace recurrent coding tasks.";
+    const reactDesc = "React is a library for building composable user interfaces. It encourages the creation of reusable UI components, which present data that changes over time. Lots of people use React as the V in MVC. React abstracts away the DOM from you, offering a simpler programming model and better performance.";
+    const mysqlDesc = "MySQL is an Oracle-backed open source relational database management system (RDBMS) based on Structured Query Language (SQL). MySQL runs on virtually all platforms, including Linux, UNIX and Windows.";
+    const javaDesc = "Java is a high-level programming language developed by Sun Microsystems. It was originally designed for developing programs for set-top boxes and handheld devices, but later became a popular choice for creating web applications. The Java syntax is similar to C++, but is strictly an object-oriented programming language";
+    const hiberDesc = "Hibernate is an open source object relational mapping (ORM) tool that provides a framework to map object-oriented domain models to relational databases for web applications. Object relational mapping is based on the containerization of objects and the abstraction that provides that capacity.";
+
+    const rowsElements = [
+    {name: "HTML",desc: htmlDesc,image: "images/HTML5.png"},
+    {name: "JS",desc: jsDesc,image: "images/JS.png"},
+    {name: "CSS",desc: cssDesc,image: "images/CSS.png"},
+    {name: "BS",desc: bsDesc,image: "images/BOOTSTRAP.png"},
+    {name: "PHP",desc: phpDesc,image: "images/PHP.png"},
+    {name: "SYMFONY",desc: symfDesc,image: "images/SYMFONY.png"},
+    {name: "REACT",desc: reactDesc,image: "images/REACT.png"},
+    {name: "MYSQL",desc: mysqlDesc,image: "images/Mysql.png"},
+    {name: "JAVA",desc: javaDesc,image: "images/JAVA.png"},
+    {name: "HIBERNATE",desc: hiberDesc,image: "images/Hibernate.png"}
+                    
+    ];
+
+    const rows = [];
+    for (let index = 0; index < rowsElements.length; index+=2) {
+        rows.push([rowsElements[index],rowsElements[index+1]]);
+        if(index===rowsElements.length-2 && rowsElements.length%2===1){   rows.push(  [   rowsElements[rowsElements.length-1] ]   )   }
+     }
     return (
             <div className="bodySection" name="Portfolio" >
                  <h1 className="SectionTitle">My Portfolio</h1>
-                 <Row className="PortfolioRow">
-                    <Col>
-                    <Card>
-                        <Row>
-                            <Col className="WebDevImg Img1">
-                            </Col>
-                            <Col>
-                        <CardText >
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
 
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-                        </CardText>
-                            </Col>
-                        </Row>
-                    </Card>
-                    </Col>
-                    <Col>
-                    <Card>
-                        <Row>
-                            <Col className="WebDevImg Img2">
-                            </Col>
-                            <Col>
-                        <CardText >
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
+                 {
 
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-                        </CardText>
-                            </Col>
-                        </Row>
-                    </Card>
-                    </Col>
-                </Row>
-                <Row className="PortfolioRow">
-                    <Col>
-                    <Card>
-                        <Row>
-                            <Col className="WebDevImg Img3">
-                            </Col>
-                            <Col>
-                        <CardText >
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-                        </CardText>
-                            </Col>
-                        </Row>
-                    </Card>
-                    </Col>
-                    <Col>
-                    <Card>
-                        <Row>
-                            <Col className="WebDevImg Img4">
-                            </Col>
-                            <Col>
-                        <CardText >
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-                        </CardText>
-                            </Col>
-                        </Row>
-                    </Card>
-                    </Col>
-                </Row>
-                <Row className="PortfolioRow">
-                    <Col>
-                    <Card>
-                        <Row>
-                            <Col className="WebDevImg Img5">
-                            </Col>
-                            <Col>
-                        <CardText >
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-                        </CardText>
-                            </Col>
-                        </Row>
-                    </Card>
-                    </Col>
-                    <Col>
-                    <Card>
-                        <Row>
-                            <Col className="WebDevImg Img6">
-                            </Col>
-                            <Col>
-                        <CardText >
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-                        </CardText>
-                            </Col>
-                        </Row>
-                    </Card>
-                    </Col>
-                </Row>
-                <Row className="PortfolioRow">
-                    <Col>
-                    <Card>
-                        <Row>
-                            <Col className="WebDevImg Img7">
-                            </Col>
-                            <Col>
-                        <CardText >
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-                        </CardText>
-                            </Col>
-                        </Row>
-                    </Card>
-                    </Col>
-                    <Col>
-                    <Card>
-                        <Row>
-                            <Col className="WebDevImg Img8">
-                            </Col>
-                            <Col>
-                        <CardText >
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-                        </CardText>
-                            </Col>
-                        </Row>
-                    </Card>
-                    </Col>
-                </Row>
-                <Row className="PortfolioRow">
-                    <Col>
-                    <Card>
-                        <Row>
-                            <Col className="WebDevImg Img9">
-                            </Col>
-                            <Col>
-                        <CardText >
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-                        </CardText>
-                            </Col>
-                        </Row>
-                    </Card>
-                    </Col>
-                    <Col>
-                    <Card>
-                        <Row>
-                            <Col className="WebDevImg Img10">
-                            </Col>
-                            <Col>
-                        <CardText >
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ipsum error eligendi molestiae eaque quas, ducimus sequi excepturi?
-                        </CardText>
-                            </Col>
-                        </Row>
-                    </Card>
-                    </Col>
-                </Row>
-               
+                     rows.map( function(currentRowElements) {
+                       return ( <Row className="PortfolioRow">
+                            {
+                                currentRowElements.map(currentRowElement => <Col><PortfolioCard name={currentRowElement.name} desc={currentRowElement.desc} image={currentRowElement.image} /></Col>)
+                            }
+                        </Row>);
+                        }
+                     )
+                 }
             </div>
         )
     
 } 
 
+
+
+const PortfolioCard = (props) => {
+
+    // props.image
+    return (
+        <Card>
+            <Row>
+                <Col className={`WebDevImg`}>
+                </Col>
+                <Col>
+                    <CardText >
+                        {props.desc}
+                    </CardText>
+                </Col>
+            </Row>
+        </Card>
+        )
+
+} 
 
 const Github = (props) => {
     return <div />;
